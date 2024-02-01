@@ -124,15 +124,12 @@ def split(args):
         print(f"Found {len(positions)} appended dtbs")
 
 
-def get_dtb_filename(n, suffix=""):
+def get_dtb_filename(n):
     """Get the filename for the DTB."""
     if n == 0:
-        return "00_kernel"
+        return ""
     n = str(n).zfill(2)
-    basename = f"{n}_dtbdump"
-    if suffix != "":
-        basename += f"_{suffix}"
-    return f"{basename}.dtb"
+    return f"{n}_dtbdump.dtb"
 
 
 if __name__ == "__main__":
