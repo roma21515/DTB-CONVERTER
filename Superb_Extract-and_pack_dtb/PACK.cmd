@@ -2,6 +2,8 @@
 color a
 cls
 
+cd WorkDir
+
 python pack-dtb.py
 
-pause
+timeout /t 6 /nobreak >nul

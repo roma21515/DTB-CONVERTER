@@ -4,9 +4,11 @@ cls
 
 set filename=%~n1%~x1
 
-copy %1 work.img
+copy %1 WorkDir\work.img
+
+cd WorkDir
 
 python extract-dtb.py work.img
 
-pause
+timeout /t 6 /nobreak >nul
 
